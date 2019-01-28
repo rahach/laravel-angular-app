@@ -1,0 +1,65 @@
+<!-- <main role="main">
+  <div class="py-5 bg-light">
+    <div class="container">
+      <div *ngIf="isLoading" class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+
+
+
+  <div class="search-results"
+        infinite-scroll
+        [infiniteScrollDistance]="scrollDistance"
+        [infiniteScrollUpDistance]="scrollUpDistance"
+        [infiniteScrollThrottle]="throttle"
+        (scrolled)="onScrollDown()"
+        (scrolledUp)="onUp()">
+
+
+      <div class="row">
+        <div class="col-md-4" *ngFor="let product of products">
+          <div class="card mb-4 box-shadow">
+            <img class="card-img-top" src="{{ product.image_url }}" alt="{{ product.name }}">
+            <div class="card-body">
+              <p><a routerLink="/products/{{ product.id }}" class="card-link">{{ product.name }}</a></p>
+              <p class="card-text">{{ product.short_description }}</p>
+              <a routerLink="/products/{{ product.id }}" class="card-link">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    </div>
+  </div>
+</main> -->
+
+<main role="main">
+  <div class="py-5 bg-light">
+    <div class="container">
+      <div *ngIf="isLoading" class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+
+      <div class="row" infinite-scroll 
+      (scrolled)="onScrollDown()" 
+      >
+        <div class="col-md-4" *ngFor="let product of products">
+          <div class="card mb-4 box-shadow">
+            <img class="card-img-top" src="{{ product.image_url }}" alt="{{ product.name }}">
+            <div class="card-body">
+              <p><a routerLink="/products/{{ product.id }}" class="card-link">{{ product.name }}</a></p>
+              <p class="card-text">{{ product.short_description }}</p>
+              <a routerLink="/products/{{ product.product_slug }}" class="card-link">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
