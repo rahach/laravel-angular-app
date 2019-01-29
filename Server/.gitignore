@@ -1,6 +1,7 @@
 /public/hot
 /public/storage
 /storage
+/config
 /vendor
 /.idea
 /.vscode

@@ -165,8 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Superbalist\LaravelGoogleCloudStorage\GoogleCloudStorageServiceProvider::class,
-        Barryvdh\Cors\ServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -224,7 +223,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'GCS' => Superbalist\LaravelGoogleCloudStorage\GoogleCloudStorageServiceProvider::class
 
     ],
 
