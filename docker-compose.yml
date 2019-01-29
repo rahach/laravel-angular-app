@@ -12,7 +12,6 @@ services:
     environment:
       - "DB_PORT=3306"
       - "DB_HOST=database"
-      - "CORS_ALLOWED_ORIGIN=http://localhost:8080"      
   # The Web Server
   web:
     build:
